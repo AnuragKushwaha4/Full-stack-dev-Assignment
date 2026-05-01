@@ -42,21 +42,21 @@ return(
 
 <div className="auth-container">
 
-<h2>Register</h2>
+<h2>Create Account</h2>
 
 <form className="auth-form" onSubmit={handleSubmit}>
 
 <input
 type="text"
 name="name"
-placeholder="Name"
+placeholder="Full Name"
 onChange={handleChange}
 />
 
 <input
 type="email"
 name="email"
-placeholder="Email"
+placeholder="Email Address"
 onChange={handleChange}
 />
 
@@ -70,48 +70,50 @@ onChange={handleChange}
 <input
 type="text"
 name="phone"
-placeholder="Phone"
+placeholder="Phone Number"
 onChange={handleChange}
 />
 
 {/* Role Selection */}
 
-<div style={{textAlign:"left"}}>
+<div className="role-container">
 
-<p>Select Role</p>
+<p className="role-title">Select Role</p>
 
-<label>
+<div className="role-options">
+
+<label className="role-option">
 <input
 type="radio"
 name="role"
 value="admin"
 onChange={handleChange}
 />
-Admin
+<span>Admin</span>
 </label>
 
-<br/>
-
-<label>
+<label className="role-option">
 <input
 type="radio"
 name="role"
 value="user"
 onChange={handleChange}
 />
-User
+<span>User</span>
 </label>
 
 </div>
 
+</div>
+
 <button type="submit">
-Register
+Create Account
 </button>
 
 </form>
 
-<p>
-Already have account? <Link to="/login">Login</Link>
+<p className="auth-switch">
+Already have an account? <Link to="/login">Login</Link>
 </p>
 
 </div>
