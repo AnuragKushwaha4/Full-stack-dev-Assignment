@@ -9,13 +9,10 @@ function Dashboard() {
   };
 
   return (
-    <div style={{textAlign:"center", marginTop:"100px"}}>
-      <h1>You are Logged In</h1>
-
-      <button onClick={handleLogout}>
-        Logout
-      </button>
-    </div>
+    <div className="dashboard">
+  <h1>You are Logged In</h1>
+  <button onClick={handleLogout}>Logout</button>
+</div>
   );
 }
 
