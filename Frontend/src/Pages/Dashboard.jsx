@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { logoutUser } from "../api/authApi";
+import { logoutUser } from "../Http/index";
 
 function Dashboard(){
 

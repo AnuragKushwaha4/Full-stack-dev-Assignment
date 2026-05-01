@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "../api/authApi";
+import { registerUser } from "../Http/index";
 
 function Register(){
 
@@ -31,7 +31,9 @@ navigate("/login");
 
 }
 catch(error){
-alert(error.response?.data?.message || "Error registering");
+
+alert(error.response?.data?.message || "Register failed")
+
 }
 
 }
@@ -72,12 +74,35 @@ placeholder="Phone"
 onChange={handleChange}
 />
 
+{/* Role Selection */}
+
+<div style={{textAlign:"left"}}>
+
+<p>Select Role</p>
+
+<label>
 <input
-type="text"
+type="radio"
 name="role"
-placeholder="Role"
+value="admin"
 onChange={handleChange}
 />
+Admin
+</label>
+
+<br/>
+
+<label>
+<input
+type="radio"
+name="role"
+value="user"
+onChange={handleChange}
+/>
+User
+</label>
+
+</div>
 
 <button type="submit">
 Register
