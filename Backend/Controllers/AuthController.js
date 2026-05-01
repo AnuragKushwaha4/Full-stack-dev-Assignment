@@ -82,16 +82,6 @@ async function Login(req,res,next){
 
 }
 
-async function GetUserData(req,res,next){
-    try{
-        const user = await usermodel.findById({_id:req.user._id})
-        return res.status(200).json({success:true,message:"User found",data:user})
-    }
-    catch(error){
-        return next(error)
-    }
-
-}
 
 function Logout(req,res,next){
     try{
@@ -104,4 +94,4 @@ function Logout(req,res,next){
     }
 }
 
-module.exports ={Register,Login,GetUserData,Logout}
+module.exports ={Register,Login,Logout}
