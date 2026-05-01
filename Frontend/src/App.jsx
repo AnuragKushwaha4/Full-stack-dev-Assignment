@@ -1,11 +1,11 @@
-import React from 'react'
-
-const App = () => {
+import AppRoutes from "./routes/AppRoutes";
+import "./styles/auth.css"
+function App() {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      <AppRoutes />
+    </>
+  );
 }
 
-export default App
+export default App;
