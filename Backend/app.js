@@ -18,8 +18,11 @@ const PORT = config.port;
 app.use(cookieParser())
 app.use(express.json())
 app.use(CORS({
-    origin: "http://localhost:5173",
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://full-stack-dev-assignment-t33b.vercel.app"
+  ],
+  credentials: true
 }));
 
 
